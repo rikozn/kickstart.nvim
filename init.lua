@@ -6,6 +6,10 @@ vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
+vim.opt.guifont = {
+  'JetBrainsMono Nerd Font',
+  ':h12',
+}
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -566,12 +570,13 @@ require('lazy').setup({
       vim.list_extend(ensure_installed, {
         'stylua',
         'selene',
-        'autopep8',
+        'black',
         'pyright',
         'pylint',
         'beautysh',
         'bash-language-server',
         'shellcheck',
+        'lua-language-server',
         'bash-debug-adapter',
         'debugpy',
       })
